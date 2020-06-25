@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-
+let port = config.NODE_SERVER_PORT.PORT || 4000;
 app.use(cors());
 
 app.use((err, req, res, next) => {
