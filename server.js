@@ -17,7 +17,7 @@ const mongoose = require('./Utilities/mongooseConfig')();
 const authRoute = require('./routes/auth');
 const config = require("./Utilities/config").config;
 
-app.use(express.static(path.join(__dirname, '/dist/')));
+app.use(express.static(path.join(__dirname, '/dist/gagangarima')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -48,9 +48,9 @@ app.use((req, res, next) => {
 });
 
 
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname + '/dist/index.html'));
-// });
+ app.get('*', function (req, res) {
+   res.sendFile(path.join(__dirname + '/dist/gagangarima/index.html'));
+ });
 
 /**
  * Start Express server.
