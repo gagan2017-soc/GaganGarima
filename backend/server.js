@@ -18,6 +18,7 @@ const authRoute = require('./routes/auth');
 const config = require("./Utilities/config").config;
 
 app.use(express.static(path.join(__dirname, '/gagangarima/')));
+pp.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/", express.static(path.join(__dirname, "gagangarima")));
 
 app.use(bodyParser.json());
