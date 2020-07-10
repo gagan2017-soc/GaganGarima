@@ -17,7 +17,8 @@ const mongoose = require('./Utilities/mongooseConfig')();
 const authRoute = require('./routes/auth');
 const config = require("./Utilities/config").config;
 
-app.use(express.static(path.join(__dirname, '/dist/')));
+app.use(express.static(path.join(__dirname, '/gagangarima/')));
+app.use("/", express.static(path.join(__dirname, "gagangarima")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -44,17 +45,14 @@ app.use('/auth', authRoute);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  next();
+    res.sendFile(path.join(__dirname, "gagangarima", "index.html"));
 });
 
 
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname + '/dist/index.html'));
-// });
 
 /**
  * Start Express server.
  */
 server.listen(port, () => {
-  console.log('app listening on port:' + config.NODE_SERVER_PORT.port);
+  console.log('app listening on port:' + port);
 });
