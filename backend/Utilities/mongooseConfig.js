@@ -4,7 +4,7 @@ var config = require("../Utilities/config").config;
 
 module.exports = function() {
     mongoose.Promise = global.Promise;
-    var db = mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+    var db = mongoose.connect(config.DB_URL.url, { useNewUrlParser: true });
     require('../Models/User');
     return db;
 };
