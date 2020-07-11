@@ -3,7 +3,7 @@ let environment = "dev";
 let serverURLs = {
     "dev": {
         "NODE_SERVER": "http://localhost",
-        "NODE_SERVER_PORT": "4000",
+        "NODE_SERVER_PORT": process.env.PORT,
         "MONGO_DB": "mongodb+srv://gagan20:gagan20@cluster0-wnbgs.mongodb.net/gagan2020?retryWrites=true&w=majority"
     },
     "production": {
