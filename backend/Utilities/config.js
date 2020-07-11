@@ -4,12 +4,12 @@ let serverURLs = {
     "dev": {
         "NODE_SERVER": "http://localhost",
         "NODE_SERVER_PORT": "4000",
-        "MONGO_DB": "mongodb+srv://gagan_2020:Gagan2020%230@cluster0-wnbgs.mongodb.net/gagan_2020?retryWrites=true&w=majority"
+        "MONGO_DB": "mongodb+srv://gagan20:gagan20@cluster0-wnbgs.mongodb.net/gagan2020?retryWrites=true&w=majority"
     },
     "production": {
         "NODE_SERVER": "http://11.11.11.11",
         "NODE_SERVER_PORT": "3000",
-        "MONGO_DB": "mongodb+srv://gagan_2020:Gagan2020%230@cluster0-wnbgs.mongodb.net/gagan_2020?retryWrites=true&w=majority"
+        "MONGO_DB": "mongodb+srv://gagan20:gagan20@cluster0-wnbgs.mongodb.net/gagan2020?retryWrites=true&w=majority"
     }
 }
 
