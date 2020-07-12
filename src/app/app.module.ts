@@ -54,6 +54,7 @@ import { PageMemberProfileComponent } from './page-member-profile/page-member-pr
 import { PageMemberViewtransComponent } from './page-member-viewtrans/page-member-viewtrans.component';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
+import {AccordionModule} from 'primeng/accordion';
 //import {MatExpansionModule} from '@angular/material/expansion';
 
 const  appRoutes:  Routes  = [
@@ -151,6 +152,7 @@ const  appRoutes:  Routes  = [
     ReactiveFormsModule,
     TableModule,
     ButtonModule,
+    AccordionModule,
     RouterModule.forRoot(
       appRoutes,
     )    
