@@ -1,3 +1,6 @@
 .page-footer {
     background-color: gainsboro;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
