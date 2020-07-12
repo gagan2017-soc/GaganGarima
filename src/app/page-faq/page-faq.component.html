@@ -3,48 +3,33 @@
       <li class="breadcrumb-item active" aria-current="page">FAQ's</li>
     </ol>
   </nav>
-  <div class="accordion" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Collapsible Group Item #1
-          </button>
-        </h2>
-      </div>
-  
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Collapsible Group Item #2
-          </button>
-        </h2>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Collapsible Group Item #3
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-  </div>
+  <p-toast [style]="{marginTop: '80px'}"></p-toast>
+  <p-accordion (onClose)="onTabClose($event)" (onOpen)="onTabOpen($event)">
+    <p-accordionTab header="What procedures I need to follow before moving into Gagan Garima?">
+      Please inform the Estate Manager of Gagan Garima and fill in the new owner/tenant form. Please carry the gate pass which was issued by society office, otherwise security will not allow your good/material.
+    </p-accordionTab>
+    <p-accordionTab header="Are there any base/standard rates decided by the society for house maids?">
+      Yes, 400/month for cleaning and washing if family with 4 person or less. For additional family member, extra charge of 50 INR is applicable. For cooking once a day 1500 INR per month for family of two Any conflict about charges should be resolved at society office..
+    </p-accordionTab>
+    <p-accordionTab header="How do I become part of Roseland Residency Mail Group?">
+      Please submit the written application with your email ID to the Estate Manage in Society Office.
+    </p-accordionTab>
+    <p-accordionTab header="How do I get parking sticker?" >
+      Once the resident submits required documents in the Society Office, parking sticker will be issued after verification. Vehicle sticker will be issued based on the allotted parking, Please do not ask for more stickers.
+    </p-accordionTab>
+    <p-accordionTab header="What should I do if there is no water/electricity in my apartment?" >
+      Please call at 9552042100 On call staff will inspect the problem and suggest required fix. If it is internal problem to your apartment, you have to register a complaint at maintenance office.
+    </p-accordionTab>
+    <p-accordionTab header="What should I do if the power goes off and lifts are not working?" >
+      Please check the notice board; it might be due to routine maintenance from Otis Please raise a complaint by writing in the register kept at society office Call to Otis directly at 020 - 24227518 / 020 - 24226090 In case of emergency, please call 9552042100.
+    </p-accordionTab>
+    <p-accordionTab header=" Whom should I contact if I have a plumbing/electrician related problem inside my flat?" >
+      The plumber and electricians are appointed by the society and their primary responsibility is to take care of the society maintenance. Maintenance inside the flats is not their primary responsibility You might choose to contact the staff of Roseland or choose to bring help from outside For any escalations please speak to the management committee member or please write to us at gagangarimachs@gmail.com
+    </p-accordionTab>
+    <p-accordionTab header=" What procedures do I need to follow before I leave Roseland?" >
+      You need to inform the society office at least 2 weeks in advance and get the clearance and gate pass from society. The gate pass is required to take your goods outside the society main gate. You MUST clear all the due payable for Roseland Residency We would like to hear your feedback on your stay at Roseland. It will help us to improve our processes or please write to us at gagangarimachs@gmail.com
+    </p-accordionTab>
+    <p-accordionTab header=" What different Amenities Roseland Residency has?" >
+      TTennis Court Party Lawn Landscaped Garden, Children's Play Park School Bus Stop for Children Temple Jogging Park Spacious Internal Cement Concrete Roads Round the Clock Security Lots of Trees
+    </p-accordionTab>
+</p-accordion>
