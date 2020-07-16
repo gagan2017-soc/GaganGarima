@@ -1,0 +1,15 @@
+<h3><b>Festival Calendar </b></h3>
+<p-table [value]="TransData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Holiday Date</th>
+            <th>Holiday Name</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-fescal>
+        <tr>
+            <td>{{fescal.festdt}}</td>
+            <td>{{fescal.holidayname}}</td>
+        </tr>
+    </ng-template>
+</p-table>  
