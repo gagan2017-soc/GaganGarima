@@ -1,0 +1,28 @@
+<h3><b>Festival Calendar Entries</b></h3>
+<form [formGroup]="transactionForm"  (ngSubmit)="onFormSubmit()" >
+
+  <div class="form-group">
+    <label for="festdt">Holiday Date:</label>
+        <input type="date" formControlName="festdt"  class="form-control" [ngClass]="{ 'is-invalid': submitted && fval.festdt.errors }" placeholder="Enter Holiday Date here"/>
+        
+        <div *ngIf="submitted && fval.festdt.errors" class="invalid-feedback">
+            <div *ngIf="fval.festdt.errors.required">Data is required</div>
+        </div>
+  </div>
+
+  <div class="form-group">
+    <label for="holidayname">Narration</label>
+        <input type="text" formControlName="holidayname" class="form-control"  [ngClass]="{ 'is-invalid': submitted && fval.holidayname.errors }"  placeholder="Enter Holiday Name  here"/>
+        <div *ngIf="submitted && fval.holidayname.errors" class="invalid-feedback">
+          <div *ngIf="fval.holidayname.errors.required">Holiday Name is required</div>
+      </div>
+  </div>
+  <div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Create Holiday Record
+    </button>
+    <!-- <a routerLink="/login-page" class="btn btn-link">Login to continue</a> -->
+</div>
+</form>
+
