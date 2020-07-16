@@ -13,6 +13,9 @@
       <a class="list-group-item list-group-item-action"  (click)="action('member')" role="tab" aria-controls="Member List">Member View</a>
       <a class="list-group-item list-group-item-action"  (click)="action('mainview')" role="tab" aria-controls="Flat Owners">Maintiance Views</a>
       <a class="list-group-item list-group-item-action"  (click)="action('addmain')" role="tab" aria-controls="Maintance charges">Add Maintance Entry</a>
+      <a class="list-group-item list-group-item-action"  (click)="action('addfescal')" role="tab" aria-controls="festival calendar">Add Festival Calendar</a>
+      <a class="list-group-item list-group-item-action"  (click)="action('viewfescal')" role="tab" aria-controls="festival calendar View">View Festival Calendar</a>
+
     </div>
   </div>
   <div class="col-8">
@@ -21,6 +24,10 @@
       <div *ngIf="member" id="member" role="tabpanel" aria-labelledby="list-profile-list"><app-page-admin-member></app-page-admin-member>></div>
       <div *ngIf="mainview"  id="mainview" role="tabpanel" aria-labelledby="list-messages-lst"><app-page-admin-mainview></app-page-admin-mainview>></div>
       <div *ngIf="addmain"  id="addmain" role="tabpanel" aria-labelledby="list-settings-list"><app-page-trans-entry></app-page-trans-entry>></div>
+      <div *ngIf="addfescal"  id="addfescal" role="tabpanel" aria-labelledby="list-fescal-list"><app-page-fescal-entry></app-page-fescal-entry>></div>
+      <div *ngIf="viewfescal"  id="viewfescal" role="tabpanel" aria-labelledby="list-fescal-list"><app-page-fescal-view></app-page-fescal-view>></div>
+      
+
     </div>
   </div>
 </div>
