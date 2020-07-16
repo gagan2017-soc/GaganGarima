@@ -16,6 +16,8 @@ export class PageAdminDisplayComponent implements OnInit {
   member:boolean=false;
   mainview:boolean=false;
   addmain: boolean=false;
+  addfescal: boolean=false;
+  viewfescal: boolean= false;
 
   
   constructor(
@@ -34,6 +36,8 @@ action(name:String){
   this.member=false;
   this.mainview=false;
   this.addmain = false;
+  this.addfescal = false;
+  this.viewfescal = false;
   if(name=='dashboard'){
     this.dashboard=true;
   }
@@ -45,6 +49,12 @@ action(name:String){
   }
   if(name=='addmain'){
     this.addmain=true;
+  }
+   if(name=='addfescal'){
+    this.addfescal=true;
+  }
+   if(name=='viewfescal'){
+    this.viewfescal=true;
   }
 }
 logout() {
