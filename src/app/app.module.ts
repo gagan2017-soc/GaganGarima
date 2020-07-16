@@ -20,6 +20,10 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageGenGuideComponent } from './page-gen-guide/page-gen-guide.component';
 import { PageFaqComponent } from './page-faq/page-faq.component';
 
+import { PageFescalEntryComponent } from './page-fescal-entry/page-fescal-entry.component';
+import { PageFescalViewComponent } from './page-fescal-view/page-fescal-view.component';
+
+
 
 import { PageManPaymentComponent } from './page-man-payment/page-man-payment.component';
 import {PageFesCalComponent} from './page-fes-cal/page-fes-cal.component';
@@ -55,6 +59,7 @@ import { PageMemberViewtransComponent } from './page-member-viewtrans/page-membe
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {AccordionModule} from 'primeng/accordion';
+import {FestivalcalService} from './service/festivalcal.service';
 //import {MatExpansionModule} from '@angular/material/expansion';
 
 const  appRoutes:  Routes  = [
@@ -133,6 +138,8 @@ const  appRoutes:  Routes  = [
     PageMemberDashboardComponent,
     
     PageMemberProfileComponent,
+    PageFescalEntryComponent,
+    PageFescalViewComponent,
     
     PageMemberViewtransComponent
     
@@ -158,7 +165,7 @@ const  appRoutes:  Routes  = [
     )    
         
   ],
-  providers: [UserService,TranscationService,{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],  
+  providers: [UserService,TranscationService,FestivalcalService,{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],  
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
