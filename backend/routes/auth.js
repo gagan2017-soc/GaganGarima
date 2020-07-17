@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router({ mergeParams: true });
 const authService = require("../Services/auth");
 const transcationService = require("../Services/transcation");
-const festivalcalservice = require("../Services/festivalcal")
+const festivalcalservice = require("../Services/festivalcal");
 /* User Registration. *///
 router.post("/register", authService.register);
 
