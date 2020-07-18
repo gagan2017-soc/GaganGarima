@@ -60,6 +60,19 @@ import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {AccordionModule} from 'primeng/accordion';
 import {FestivalcalService} from './service/festivalcal.service';
+import { PageEffortsComponent } from './page-efforts/page-efforts.component';
+import { PageEnergyEffComponent } from './page-energy-eff/page-energy-eff.component';
+import { PageGoGreenComponent } from './page-go-green/page-go-green.component';
+import { PageWaterConvComponent } from './page-water-conv/page-water-conv.component';
+import { PageHappyStreetComponent } from './page-happy-street/page-happy-street.component';
+import { PageEmergNumberComponent } from './page-emerg-number/page-emerg-number.component';
+import { PageHospitalComponent } from './page-hospital/page-hospital.component';
+import { PageBankComponent } from './page-bank/page-bank.component';
+import { PageDoctorComponent } from './page-doctor/page-doctor.component';
+import { PageSchoolComponent } from './page-school/page-school.component';
+import { PageGenInfoComponent } from './page-gen-info/page-gen-info.component';
+import { PageNearSocComponent } from './page-near-soc/page-near-soc.component';
+import { PageTenderComponent } from './page-tender/page-tender.component';
 //import {MatExpansionModule} from '@angular/material/expansion';
 
 const  appRoutes:  Routes  = [
@@ -141,7 +154,33 @@ const  appRoutes:  Routes  = [
     PageFescalEntryComponent,
     PageFescalViewComponent,
     
-    PageMemberViewtransComponent
+    PageMemberViewtransComponent,
+    
+    PageEffortsComponent,
+    
+    PageEnergyEffComponent,
+    
+    PageGoGreenComponent,
+    
+    PageWaterConvComponent,
+    
+    PageHappyStreetComponent,
+    
+    PageEmergNumberComponent,
+    
+    PageHospitalComponent,
+    
+    PageBankComponent,
+    
+    PageDoctorComponent,
+    
+    PageSchoolComponent,
+    
+    PageGenInfoComponent,
+    
+    PageNearSocComponent,
+    
+    PageTenderComponent
     
   // MatExpansionModule
   ],
