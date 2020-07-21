@@ -1,1 +1,26 @@
-<p>page-school works!</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Schools</li>
+    </ol>
+  </nav>
+  <h2><b><u>Near By Schools</u></b></h2>
+  <p-table [value]="dataSource">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Category</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-main>
+        <tr>
+            <td>{{main.name}}</td>
+            <td>{{main.address}}</td>
+            <td>{{main.contactno}}</td>
+            <td>{{main.category}}</td>
+        </tr>
+    </ng-template>
+</p-table>  
+  
