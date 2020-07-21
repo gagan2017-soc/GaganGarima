@@ -1,1 +1,28 @@
-<p>page-doctor works!</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+    </ol>
+  </nav>
+  <h2><b><u>Doctors </u></b></h2>
+  <p-table [value]="dataSource">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>speciality</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-main>
+        <tr>
+            <td>{{main.srno}}</td>
+            <td>{{main.name}}</td>
+            <td>{{main.contactno}}</td>
+            <td>{{main.address}}</td>
+            <td>{{main.website}}</td>
+        </tr>
+    </ng-template>
+</p-table>  
+  
