@@ -1,1 +1,26 @@
-<p>page-near-soc works!</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Near By Socities</li>
+    </ol>
+  </nav>
+  <h2><b><u>Near By Socities</u></b></h2>
+  <p-table [value]="dataSource">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>General Comment</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-main>
+        <tr>
+            <td>{{main.name}}</td>
+            <td>{{main.address}}</td>
+            <td>{{main.contactno}}</td>
+            <td>{{main.comment}}</td>
+        </tr>
+    </ng-template>
+</p-table>  
+  
