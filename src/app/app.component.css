@@ -1,7 +1,7 @@
 html,body
 {
     width: 100%;
-   
+    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -9,7 +9,16 @@ html,body
 .filler {
     flex: 1 1 auto;
  }
- .nav-item{
+ /* .nav-item{
   padding:2px;
   margin-left: 7px;
+} */
+
+@media (max-width:760px){
+  .overflow-hidden{
+    overflow-x: hidden;
+  }
+  .overflow-visible{
+    overflow-x: visible;
+  }
 }
