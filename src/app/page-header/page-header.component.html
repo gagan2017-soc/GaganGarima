@@ -1,9 +1,14 @@
+<div style="height: 20vh;"> 
 <mat-toolbar  color="primary"  >
     <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
     <span><img  src="./assets/logo.png"  style="width:50px;"></span>
     <span>Gagan Garima Society</span>
     <span class = "filler"></span>
     <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md>
      <button mat-button routerLink="/home-page">Home</button>
      <button mat-button [matMenuTriggerFor]="Resident">Residents</button>
        <mat-menu #Resident="matMenu">
@@ -49,5 +54,61 @@
         <button mat-menu-item routerLink="/card-list">About Us</button>
         <button mat-menu-item routerLink="/tender-page">Tender</button>
       </mat-menu>
+    </div>
     </mat-toolbar-row>
     </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+          <mat-nav-list>
+            <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+            <button mat-button routerLink="/home-page">Home</button>
+     <button mat-button [matMenuTriggerFor]="Resident">Residents</button>
+       <mat-menu #Resident="matMenu">
+        <button mat-menu-item routerLink="/login-page" > Member Login</button>
+         <button mat-menu-item routerLink="/gen-guide-page" > General Guide Lines</button>
+         <button mat-menu-item routerLink="/faq-page">FAQ's</button>
+         <button mat-menu-item routerLink="/man-pay-page">Maintaince Payment</button>
+         <button mat-menu-item routerLink="/fes-cal-page">Festival Calendars</button>
+         <button mat-menu-item routerLink="/ren-house-page">Renting House</button>
+         <button mat-menu-item routerLink="/amenties-page">Amenties</button>
+         <button mat-menu-item routerLink="/news-page">News</button>
+       </mat-menu>
+       <button mat-button [matMenuTriggerFor]="gallery">Gallery</button>
+       <mat-menu #gallery="matMenu">
+        <button mat-menu-item routerLink="/gan-gallery-page">Ganapati Celebration</button>
+        <button mat-menu-item routerLink="/oth-gallery-page">Other Celebration</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="manage">Management</button>
+      <mat-menu #manage="matMenu">
+       <button mat-menu-item routerLink="/man-committe-page">Management  Committe</button>
+       <button mat-menu-item routerLink="/supp-staff-page">Support Staff</button>
+     </mat-menu>
+     <button mat-button [matMenuTriggerFor]="project">Project</button>
+     <mat-menu #project="matMenu">
+       <button mat-menu-item routerLink="/our-effors-page"> Our Efforts</button>
+       <button mat-menu-item routerLink="/energy-eff-page">Energy Efficiency</button>
+       <button mat-menu-item routerLink="/go-green-page">Go Green</button>
+       <button mat-menu-item routerLink="/water-conv-page">Water Conservation</button>
+       <button mat-menu-item routerLink="/happy-street-page">Happy Street</button>
+     </mat-menu>
+     <button mat-button [matMenuTriggerFor]="around">Around Us</button>
+     <mat-menu #around="matMenu">
+       <button mat-menu-item  routerLink="/emerg-number-page">Emergency Number</button>
+       <button mat-menu-item  routerLink="/hospital-page">Hospital</button>
+       <button mat-menu-item  routerLink="/bank-page">Bank</button>
+       <button mat-menu-item  routerLink="/doctor-page">Doctor</button>
+       <button mat-menu-item  routerLink="/school-page">School</button>
+       <button mat-menu-item  routerLink="/gen-info-page">General Info</button>
+       <button mat-menu-item  routerLink="/nearby-soc-page">Near by Socities</button>
+     </mat-menu>
+     <button mat-button [matMenuTriggerFor]="contact">Contact Us</button>
+     <mat-menu #contact="matMenu">
+       <button mat-menu-item routerLink="/card-list">About Us</button>
+       <button mat-menu-item routerLink="/tender-page">Tender</button>
+     </mat-menu>
+          </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
