@@ -73,6 +73,11 @@ import { PageSchoolComponent } from './page-school/page-school.component';
 import { PageGenInfoComponent } from './page-gen-info/page-gen-info.component';
 import { PageNearSocComponent } from './page-near-soc/page-near-soc.component';
 import { PageTenderComponent } from './page-tender/page-tender.component';
+import {MenubarModule} from 'primeng/menubar';
+import { PageHeaderComponent } from './page-header/page-header.component';
+
+
+
 //import {MatExpansionModule} from '@angular/material/expansion';
 
 const  appRoutes:  Routes  = [
@@ -193,7 +198,9 @@ const  appRoutes:  Routes  = [
     
     PageNearSocComponent,
     
-    PageTenderComponent
+    PageTenderComponent,
+    
+    PageHeaderComponent
     
   // MatExpansionModule
   ],
@@ -211,6 +218,8 @@ const  appRoutes:  Routes  = [
     ReactiveFormsModule,
     TableModule,
     ButtonModule,
+    MenubarModule,
+  
     AccordionModule,
     RouterModule.forRoot(
       appRoutes,

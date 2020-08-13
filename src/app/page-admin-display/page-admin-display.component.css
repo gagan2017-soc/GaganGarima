@@ -13,3 +13,9 @@
 .mat-ink-bar {
   display: none;
 }
+.list-group{
+  background-color: red;
+}
+.list-group-item{
+  font-style: italic;
+}
