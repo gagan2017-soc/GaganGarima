@@ -1,12 +1,89 @@
 
-<body>
-  <div class="overflow-hidden">
-    <div class="overflow-visible">
-      <app-page-header></app-page-header>
+<mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <span><img  src="./assets/logo.png"  style="width:50px;"></span>
+        <h1>Gagan Garima Society</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <button mat-button routerLink="/home-page">Home</button>
+            <button mat-button [matMenuTriggerFor]="Resident">Residents</button>
+              <mat-menu #Resident="matMenu">
+               <button mat-menu-item routerLink="/login-page" > Member Login</button>
+                <button mat-menu-item routerLink="/gen-guide-page" > General Guide Lines</button>
+                <button mat-menu-item routerLink="/faq-page">FAQ's</button>
+                <button mat-menu-item routerLink="/man-pay-page">Maintaince Payment</button>
+                <button mat-menu-item routerLink="/fes-cal-page">Festival Calendars</button>
+                <button mat-menu-item routerLink="/ren-house-page">Renting House</button>
+                <button mat-menu-item routerLink="/amenties-page">Amenties</button>
+                <button mat-menu-item routerLink="/news-page">News</button>
+              </mat-menu>
+              <button mat-button [matMenuTriggerFor]="gallery">Gallery</button>
+              <mat-menu #gallery="matMenu">
+               <button mat-menu-item routerLink="/gan-gallery-page">Ganapati Celebration</button>
+               <button mat-menu-item routerLink="/oth-gallery-page">Other Celebration</button>
+             </mat-menu>
+              <button mat-button [matMenuTriggerFor]="manage">Management</button>
+              <mat-menu #manage="matMenu">
+               <button mat-menu-item routerLink="/man-committe-page">Management  Committe</button>
+               <button mat-menu-item routerLink="/supp-staff-page">Support Staff</button>
+             </mat-menu>
+             <button mat-button [matMenuTriggerFor]="project">Project</button>
+             <mat-menu #project="matMenu">
+               <button mat-menu-item routerLink="/our-effors-page"> Our Efforts</button>
+               <button mat-menu-item routerLink="/energy-eff-page">Energy Efficiency</button>
+               <button mat-menu-item routerLink="/go-green-page">Go Green</button>
+               <button mat-menu-item routerLink="/water-conv-page">Water Conservation</button>
+               <button mat-menu-item routerLink="/happy-street-page">Happy Street</button>
+             </mat-menu>
+             <button mat-button [matMenuTriggerFor]="around">Around Us</button>
+             <mat-menu #around="matMenu">
+               <button mat-menu-item  routerLink="/emerg-number-page">Emergency Number</button>
+               <button mat-menu-item  routerLink="/hospital-page">Hospital</button>
+               <button mat-menu-item  routerLink="/bank-page">Bank</button>
+               <button mat-menu-item  routerLink="/doctor-page">Doctor</button>
+               <button mat-menu-item  routerLink="/school-page">School</button>
+               <button mat-menu-item  routerLink="/gen-info-page">General Info</button>
+               <button mat-menu-item  routerLink="/nearby-soc-page">Near by Socities</button>
+             </mat-menu>
+             <button mat-button [matMenuTriggerFor]="contact">Contact Us</button>
+             <mat-menu #contact="matMenu">
+               <button mat-menu-item routerLink="/card-list">About Us</button>
+               <button mat-menu-item routerLink="/tender-page">Tender</button>
+             </mat-menu>
+    
+        </div>
+      </mat-toolbar-row>
+    
+      <mat-toolbar-row>
+          <span style="font-size: 12px;">Welcome to Gagan Garima Society </span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+      <mat-sidenav-container>
+            <mat-sidenav #sidenav>
+              <mat-nav-list>
+          
+                <a mat-list-item [routerLink]="'/home-page'" (click)="sidenav.toggle()"> Home </a>
+                <a mat-list-item [routerLink]="'/login-page'" (click)="sidenav.toggle()">Member Login </a>
+                <a mat-list-item [routerLink]="'/gen-guide-page'" (click)="sidenav.toggle()"> General Guide Lines </a>
+                <a mat-list-item [routerLink]="'/faq-page'" (click)="sidenav.toggle()"> FAQ's </a>
+                <a mat-list-item [routerLink]="'/man-pay-page'" (click)="sidenav.toggle()"> Maintaince Payment </a>
+                <a mat-list-item [routerLink]="'/fes-cal-page'" (click)="sidenav.toggle()">  Festival Calendars </a>
+                <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+          
+              </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+              <div style="height: 88vh">
+          
+                <router-outlet></router-outlet>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
 
-      <router-outlet></router-outlet> 
+      <!-- <router-outlet></router-outlet>  -->
 
       <app-main-footer></app-main-footer>
-</div>
-</div>
-</body>
